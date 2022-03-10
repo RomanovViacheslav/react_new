@@ -36,3 +36,118 @@
     transform: rotate(360deg);
   }
 }
+.root {
+  background-color: rgb(147, 170, 197);
+}
+.container {
+  width: 1250px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card__img {
+  height: 120px;
+  width: 160px;
+}
+
+.card {
+  margin-left: 10px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid rgb(179, 173, 173);
+  box-sizing: border-box;
+  box-shadow: 1px 5px 5px rgb(134, 132, 132);
+  text-align: center;
+  height: 370px;
+}
+
+.card__unit {
+  padding-right: 80px;
+}
+
+.card__price {
+  font-weight: 600;
+}
+
+.button__add {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #fdbe33 #000 #d77206;
+  border-radius: 6px;
+  background: linear-gradient(#f3ae0f, #e38916) #e38916;
+  transition: 0.2s;
+}
+.button__add:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+.button__add:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+.button__remove {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #ac9a72 #000 #977e63;
+  border-radius: 6px;
+  background: linear-gradient(#ddc181, #e0b379) #ddc3a1;
+  transition: 0.2s;
+}
+.button__remove:hover {
+  background: linear-gradient(#8a6f2d, #7e5d2b) #967522;
+}
+.button__remove:active {
+  background: linear-gradient(#42331d, #4e411e) #6d522a;
+}
+
+.button__absence {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: rgb(54, 53, 53);
+  text-decoration: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #858483 #000 #868584;
+  border-radius: 6px;
+  background: linear-gradient(#d6d5d3, #cecdcc) #d4d4d4;
+  transition: 0.2s;
+}
+.button__absence:hover {
+  background: linear-gradient(#dad9d7, #eeeded) #dfdacf;
+}
+.button__absence:active {
+  background: linear-gradient(#727271, #92908a) #92908d;
+}
+
+.footer__text {
+  font-weight: 500;
+}
+
+.button__absence-active {
+  display: none;
+}
+
+.footer__text-active {
+  margin-top: 60px;
+  color: red;
+  font-weight: 600;
+}
