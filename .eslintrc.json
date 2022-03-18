@@ -23,10 +23,7 @@
   "rules": {
     "import/no-unresolved": "off",
     "import/extensions": "off",
-    "react/jsx-filename-extension": [
-      "error",
-      { "extensions": [".ts", ".tsx"] }
-    ],
+    "react/jsx-filename-extension": ["error", { "extensions": [".ts", ".tsx"] }],
     "comma-dangle": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/function-component-definition": [
@@ -37,6 +34,7 @@
       }
     ],
     "react/no-unused-prop-types": "warn",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "object-curly-newline": "off"
   }
 }

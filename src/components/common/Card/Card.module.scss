@@ -1,0 +1,23 @@
+.card {
+  // margin-left: 10px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid rgb(179, 173, 173);
+  box-sizing: border-box;
+  box-shadow: 1px 5px 5px rgb(134, 132, 132);
+  text-align: center;
+  height: 370px;
+}
+
+.card__unit {
+  padding-right: 80px;
+}
+
+.card__price {
+  font-weight: 600;
+}
+
+.card__img {
+  height: 120px;
+  width: 160px;
+}

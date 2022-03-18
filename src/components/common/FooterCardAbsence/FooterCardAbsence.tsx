@@ -1,14 +1,15 @@
 import React from 'react';
+import style from './FooterCardAbsence.module.scss';
 
 const FooterCardAbsence = () => {
   const [text, setText] = React.useState('Товар отсутствует');
-  const [textStyle, setTextStyle] = React.useState('footer__text');
-  const [nameButton, setNameButton] = React.useState('button__absence');
+  const [textStyle, setTextStyle] = React.useState(`${style.footer__text}`);
+  const [nameButton, setNameButton] = React.useState(`${style.button__absence}`);
 
   const addHandler = () => {
     setText('Добавлено в лист ожидания');
-    setTextStyle('footer__text-active');
-    setNameButton('button__absence-active');
+    setTextStyle(`${style.footer__text_active}`);
+    setNameButton(`${style.button__absence_active}`);
   };
 
   return (

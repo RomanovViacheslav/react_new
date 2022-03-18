@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './FooterCard.module.scss';
 
 const FooterCard = () => {
   const [count, setCount] = React.useState(0);
@@ -16,11 +17,11 @@ const FooterCard = () => {
 
   return (
     <div>
-      <p className="footer__text">{count} шт. добавлено</p>
-      <button className="button__add" type="button" onClick={addHandler}>
+      <p className={style.footer__text}>{count} шт. добавлено</p>
+      <button className={style.button__add} type="button" onClick={addHandler}>
         Добавить в корзину
       </button>
-      <button className="button__remove" type="button" onClick={removeHandler}>
+      <button className={style.button__remove} type="button" onClick={removeHandler}>
         Удалить из корзины
       </button>
     </div>

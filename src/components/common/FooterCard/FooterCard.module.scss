@@ -1,0 +1,51 @@
+.button__add {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #fdbe33 #000 #d77206;
+  border-radius: 6px;
+  background: linear-gradient(#f3ae0f, #e38916) #e38916;
+  transition: 0.2s;
+}
+.button__add:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+.button__add:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}
+
+.button__remove {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 2em;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  border-color: #ac9a72 #000 #977e63;
+  border-radius: 6px;
+  background: linear-gradient(#ddc181, #e0b379) #ddc3a1;
+  transition: 0.2s;
+}
+.button__remove:hover {
+  background: linear-gradient(#8a6f2d, #7e5d2b) #967522;
+}
+.button__remove:active {
+  background: linear-gradient(#42331d, #4e411e) #6d522a;
+}
+
+.footer__text {
+  font-weight: 500;
+}
+
+.footer__text-active {
+  margin-top: 60px;
+  color: red;
+  font-weight: 600;
+}

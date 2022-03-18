@@ -1,0 +1,17 @@
+.content {
+  grid-area: 'content';
+
+  margin: 15px;
+}
+
+.content__container {
+  margin: 0 auto;
+  max-width: 1440px;
+  text-align: center;
+}
+.card__section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}

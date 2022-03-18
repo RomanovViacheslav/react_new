@@ -1,0 +1,18 @@
+.form__btn {
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(#f3ae0f, #e38916) #e38916;
+  border-radius: 30px;
+  padding: 10px 25px;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.5s ease 0s;
+}
+
+.form__btn:hover {
+  background: linear-gradient(#f5ae00, #f59500) #f5ae00;
+}
+
+.form__btn:active {
+  background: linear-gradient(#f59500, #f5ae00) #f59500;
+}

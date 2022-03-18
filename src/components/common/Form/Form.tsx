@@ -1,5 +1,6 @@
 import React from 'react';
-import Input from './input';
+
+import style from './Form.module.scss';
 
 type FormPropsType = {
   title: string;
@@ -7,10 +8,10 @@ type FormPropsType = {
 };
 
 const Form = ({ title, children }: FormPropsType) => (
-  <div className="form">
+  <form className="form">
     <h1>{title}</h1>
-    <div className="form__input">{children}</div>
-  </div>
+    <div className={style.form__input}>{children}</div>
+  </form>
 );
 
 export default Form;
