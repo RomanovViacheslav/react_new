@@ -35,6 +35,7 @@
     ],
     "react/no-unused-prop-types": "warn",
     "no-unused-vars": "warn",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "react/require-default-props": "off"
   }
 }

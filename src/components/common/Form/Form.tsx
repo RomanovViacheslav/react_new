@@ -8,10 +8,10 @@ type FormPropsType = {
 };
 
 const Form = ({ title, children }: FormPropsType) => (
-  <form className="form">
+  <div className="form">
     <h1>{title}</h1>
-    <div className={style.form__input}>{children}</div>
-  </form>
+    <form className={style.form__input}>{children}</form>
+  </div>
 );
 
 export default Form;

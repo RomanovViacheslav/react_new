@@ -1,0 +1,23 @@
+.form__label {
+  position: relative;
+}
+.form__input {
+  background: #fff;
+  height: 20px;
+  width: 250px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form__input_error {
+  border-style: double;
+  background: #fff;
+  border-color: red;
+
+  height: 20px;
+  width: 250px;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 10px;
+}

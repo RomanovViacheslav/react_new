@@ -1,9 +1,10 @@
 .page_wrapper {
+  height: 100vh;
   margin: 0;
   display: grid;
   grid-template-areas:
     'header'
     'content'
     'footer';
-  // grid-template-rows: 80px calc(100% - 140px) 60px;
+  grid-template-rows: 80px calc(100% - 140px) 60px;
 }

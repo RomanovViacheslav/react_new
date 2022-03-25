@@ -1,17 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from '../../components/common/Form/Form';
-import FormButton from '../../components/common/FormButton/FormButton';
-import Input from '../../components/common/Input';
+import FormButton from '../../components/common/Form/FormButton/FormButton';
+import Input from '../../components/common/Form/Input';
 import AuthPage from '../../components/pages/AuthPage';
 
-const AuthContainer = () => (
-  <AuthPage>
-    <Form title="Авторизация">
-      <Input text="Email" type="text" />
-      <Input text="Password" type="password" />
-      <FormButton text="Войти" />
-    </Form>
-  </AuthPage>
-);
+const AuthContainer = () => <AuthPage />;
 
 export default AuthContainer;
