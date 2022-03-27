@@ -33,3 +33,11 @@ code {
 .text {
   padding-left: 20px;
 }
+
+a {
+  color: black;
+}
+
+.active {
+  color: rgb(232, 240, 130);
+}
