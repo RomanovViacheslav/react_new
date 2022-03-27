@@ -18,7 +18,6 @@ const Input: React.FC<InputPropsType> = ({
   value,
   children,
 }) => {
-  const [errorStyle, setErrorStyle] = React.useState(`${style.form__input}`);
   const [error, setError] = useState(false);
 
   const handler = (event: ChangeEvent<HTMLInputElement>) => {
@@ -27,10 +26,8 @@ const Input: React.FC<InputPropsType> = ({
 
   const blurHandler = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length === 0) {
-      setErrorStyle(`${style.form__input_error}`);
       setError(true);
     } else {
-      setErrorStyle(`${style.form__input}`);
       setError(false);
     }
   };
@@ -38,7 +35,7 @@ const Input: React.FC<InputPropsType> = ({
   return (
     <label className={style.form__label} htmlFor={id}>
       <input
-        className={errorStyle}
+        className={error ? style.form__input_error : style.form__input}
         id={id}
         placeholder={text}
         type={type}
