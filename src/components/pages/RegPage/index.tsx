@@ -48,21 +48,19 @@ const RegPage = () => {
   }, [password]);
 
   return (
-    <PageWrapper>
-      <main className={style.content}>
-        <div className={style.content__container}>
-          <Form title="Регистрация">
-            <Input text="Name" id="3" value={name} setValue={setName} />
-            <Input id="1" text="Email" setValue={setEmail} value={email} />
-            <PasswordInput id="5" value={password} setValue={setPassword} />
-            {hasErrorPassword && <ValidationMessage text={message} />}
-            <PasswordInput id="6" text="Confirm Password" value={confirm} setValue={setConfirm} />
-            {hasErrorConfirm && <ValidationMessage text={message} />}
-            <FormButton text="Зарегистрироваться" onClick={submitHandler} />
-          </Form>
-        </div>
-      </main>
-    </PageWrapper>
+    <main className={style.content}>
+      <div className={style.content__container}>
+        <Form title="Регистрация">
+          <Input text="Name" id="3" value={name} setValue={setName} />
+          <Input id="1" text="Email" setValue={setEmail} value={email} />
+          <PasswordInput id="5" value={password} setValue={setPassword} />
+          {hasErrorPassword && <ValidationMessage text={message} />}
+          <PasswordInput id="6" text="Confirm Password" value={confirm} setValue={setConfirm} />
+          {hasErrorConfirm && <ValidationMessage text={message} />}
+          <FormButton text="Зарегистрироваться" onClick={submitHandler} />
+        </Form>
+      </div>
+    </main>
   );
 };
 

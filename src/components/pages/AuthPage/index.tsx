@@ -37,18 +37,16 @@ const AuthPage = () => {
   }, [password]);
 
   return (
-    <PageWrapper>
-      <main className={style.content}>
-        <div className={style.content__container}>
-          <Form title="Авторизация">
-            <Input id="1" text="Email" setValue={setEmail} value={email} />
-            <PasswordInput id="2" value={password} setValue={setPassword} />
-            {hasError && <ValidationMessage text={message} />}
-            <FormButton text="Войти" onClick={submitHandler} />
-          </Form>
-        </div>
-      </main>
-    </PageWrapper>
+    <main className={style.content}>
+      <div className={style.content__container}>
+        <Form title="Авторизация">
+          <Input id="1" text="Email" setValue={setEmail} value={email} />
+          <PasswordInput id="2" value={password} setValue={setPassword} />
+          {hasError && <ValidationMessage text={message} />}
+          <FormButton text="Войти" onClick={submitHandler} />
+        </Form>
+      </div>
+    </main>
   );
 };
 
