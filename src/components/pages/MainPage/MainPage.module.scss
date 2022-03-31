@@ -9,9 +9,12 @@
   max-width: 1440px;
   text-align: center;
 }
+.card__section_text {
+  justify-content: center;
+}
+
 .card__section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
 }

@@ -16,21 +16,21 @@ type CardPropsType = {
 
 const Card: React.FC<CardPropsType> = (props) => {
   const { title, img, alt, unit, price, id, stock } = props;
-  console.log(`${id}`);
 
   return (
     <div className={style.card}>
       <Link to={`${id}`}>
         <h2 className={style.card__header}>{title}</h2>
-      </Link>
-      <div className={style.card__content}>
-        <img className={style.card__img} src={img} alt={alt} />
-        <div className={style.card__content_text}>
-          <span className={style.card__unit}>{unit}</span>
-          <span className={style.card__price}>{price}</span>
+
+        <div className={style.card__content}>
+          <img className={style.card__img} src={img} alt={alt} />
+          <div className={style.card__content_text}>
+            <span className={style.card__unit}>{unit}</span>
+            <span className={style.card__price}>{price}</span>
+          </div>
         </div>
-        <div>{stock ? <FooterCard /> : <FooterCardAbsence />}</div>
-      </div>
+      </Link>
+      <div>{stock ? <FooterCard /> : <FooterCardAbsence />}</div>
     </div>
   );
 };

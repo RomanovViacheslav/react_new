@@ -6,7 +6,9 @@ import logo from './logo.png';
 const Header = () => (
   <header className={style.header}>
     <div className={style.container}>
-      <img className={style.logo} src={logo} alt="logo" />
+      <NavLink to="/">
+        <img className={style.logo} src={logo} alt="logo" />
+      </NavLink>
       <ul>
         <li>
           <NavLink className={style.header__link} to="/">
