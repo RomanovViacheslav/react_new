@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Footer from '../../common/Footer';
 import Form from '../../common/Form/Form';
 import FormButton from '../../common/Form/FormButton/FormButton';
@@ -15,6 +16,15 @@ const AuthPage = () => {
   const [password, setPassword] = useState('');
   const [hasError, setHasError] = useState(false);
   const [message, setMessage] = useState('Пароль должен быть больше 10 символов');
+  const navigate = useNavigate();
+  type LocationProps = {
+    state: {
+      from: Location;
+    };
+  };
+  const location = useLocation() as unknown as LocationProps;
+
+  const fromPage = location.state?.from?.pathname || '/';
 
   const submitHandler = () => {
     if (password.length > 10) {

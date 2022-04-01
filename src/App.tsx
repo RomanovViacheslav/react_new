@@ -9,6 +9,7 @@ import RegContainer from './containers/RegContainer';
 import PageWrapper from './components/common/PageWrapper';
 import OneCardContainer from './containers/OneCardContainer';
 import ReviewsContainer from './containers/ReviewsContainer';
+import RequaireAuth from './hoc/RequaireAuth';
 
 const App = () => (
   <Routes>
@@ -18,6 +19,7 @@ const App = () => (
       <Route path="cards" element={<Navigate to="/products" replace />} />
       <Route path="products/:id" element={<OneCardContainer />} />
       <Route path="products/:id/reviews" element={<ReviewsContainer />} />
+      {/* <Route path="products/:id/reviews" element={<RequaireAuth />} /> */}
       <Route path="auth" element={<AuthContainer />} />
       <Route path="reg" element={<RegContainer />} />
       <Route path="*" element={<h1>NOT FOUND </h1>} />
