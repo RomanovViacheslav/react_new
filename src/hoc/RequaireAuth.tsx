@@ -1,15 +1,18 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useLocation, Navigate } from 'react-router-dom';
-import ReviewsContainer from '../containers/ReviewsContainer';
 
-const RequaireAuth = () => {
+import GetUserName from '../store/selector';
+
+const RequaireAuth: React.FC = ({ children }) => {
   const location = useLocation();
-  const auth = false;
+  const auth = useSelector(GetUserName);
 
-  if (!auth) {
-    return <Navigate to="/auth" state={{ from: location }} />;
+  if (auth) {
+    return <>{children}</>;
   }
-  return <ReviewsContainer />;
+  return <Navigate to="/auth" state={{ from: location }} />;
 };
 
 export default RequaireAuth;

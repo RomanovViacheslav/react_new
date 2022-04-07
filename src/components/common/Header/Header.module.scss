@@ -31,3 +31,19 @@
   margin-top: 10px;
   height: 60px;
 }
+
+.user__name {
+  color: #ecddca;
+}
+
+.user__name_login {
+  display: flex;
+  align-items: center;
+
+  & > button {
+    width: 80px;
+    font-size: 10px;
+    text-align: center;
+    margin-left: 20px;
+  }
+}

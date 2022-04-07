@@ -18,8 +18,15 @@ const App = () => (
       <Route path="products" element={<MainContainer />} />
       <Route path="cards" element={<Navigate to="/products" replace />} />
       <Route path="products/:id" element={<OneCardContainer />} />
-      <Route path="products/:id/reviews" element={<ReviewsContainer />} />
-      {/* <Route path="products/:id/reviews" element={<RequaireAuth />} /> */}
+      {/* <Route path="products/:id/reviews" element={<ReviewsContainer />} /> */}
+      <Route
+        path="products/:id/reviews"
+        element={
+          <RequaireAuth>
+            <ReviewsContainer />{' '}
+          </RequaireAuth>
+        }
+      />
       <Route path="auth" element={<AuthContainer />} />
       <Route path="reg" element={<RegContainer />} />
       <Route path="*" element={<h1>NOT FOUND </h1>} />

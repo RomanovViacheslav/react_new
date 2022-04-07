@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { SetUserNameAction } from '../../../store/actions';
 import Footer from '../../common/Footer';
 import Form from '../../common/Form/Form';
 import FormButton from '../../common/Form/FormButton/FormButton';
@@ -12,24 +14,18 @@ import PageWrapper from '../../common/PageWrapper';
 import style from './AuthPage.module.scss';
 
 const AuthPage = () => {
-  const [email, setEmail] = useState('');
+  const dispatch = useDispatch();
+  const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [hasError, setHasError] = useState(false);
   const [message, setMessage] = useState('Пароль должен быть больше 10 символов');
   const navigate = useNavigate();
-  type LocationProps = {
-    state: {
-      from: Location;
-    };
-  };
-  const location = useLocation() as unknown as LocationProps;
-
-  const fromPage = location.state?.from?.pathname || '/';
 
   const submitHandler = () => {
     if (password.length > 10) {
       setHasError(false);
-      console.log({ email, password });
+      dispatch(SetUserNameAction(name));
+      console.log({ name, password });
     } else {
       setHasError(true);
       console.log('Eror');
@@ -50,7 +46,7 @@ const AuthPage = () => {
     <main className={style.content}>
       <div className={style.content__container}>
         <Form title="Авторизация">
-          <Input id="1" text="Email" setValue={setEmail} value={email} />
+          <Input id="name" text="Name" setValue={setName} value={name} />
           <PasswordInput id="2" value={password} setValue={setPassword} />
           {hasError && <ValidationMessage text={message} />}
           <FormButton text="Войти" onClick={submitHandler} />

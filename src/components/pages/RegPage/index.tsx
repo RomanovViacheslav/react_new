@@ -1,4 +1,6 @@
 import React, { ChangeEvent, Children, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { SetEmailAction, SetPasswordAction, SetUserNameAction } from '../../../store/actions';
 import Form from '../../common/Form/Form';
 import FormButton from '../../common/Form/FormButton/FormButton';
 import Input from '../../common/Form/Input';
@@ -8,6 +10,7 @@ import PageWrapper from '../../common/PageWrapper';
 import style from './RegPage.module.scss';
 
 const RegPage = () => {
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,6 +34,9 @@ const RegPage = () => {
     } else {
       setHasErrorConfirm(false);
       setHasErrorPassword(false);
+      dispatch(SetUserNameAction(name));
+      dispatch(SetEmailAction(email));
+      dispatch(SetPasswordAction(password));
       console.log(name, email, password, confirm);
     }
   };

@@ -36,6 +36,9 @@
     "react/no-unused-prop-types": "warn",
     "no-unused-vars": "warn",
     "object-curly-newline": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "react/jsx-wrap-multilines": "off",
+    "default-param-last": "off",
+    "linebreak-style": "off"
   }
 }
