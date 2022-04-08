@@ -5,6 +5,7 @@ export const UserInfoActionType: UserInfoActionTypeType = {
   clearUserName: 'CLEAR_USER_NAME',
   setEmail: 'SET_EMAIL',
   setPassword: 'SET_PASSWORD',
+  setRegName: 'SET_REG_NAME',
 };
 
 export const SetUserNameAction = (name: string) => ({
@@ -16,12 +17,6 @@ export const ClearUserNameAction = () => ({
   type: UserInfoActionType.clearUserName,
 });
 
-// /////////////////////////////////////////////
-
-// export const EmailInfoActionType = {
-//   setEmail: 'SET_EMAIL',
-// };
-
 export const SetEmailAction = (email: string) => ({
   type: UserInfoActionType.setEmail,
   email,
@@ -30,4 +25,9 @@ export const SetEmailAction = (email: string) => ({
 export const SetPasswordAction = (password: string) => ({
   type: UserInfoActionType.setPassword,
   password,
+});
+
+export const SetRegNameAction = (nameReg: string) => ({
+  type: UserInfoActionType.setRegName,
+  nameReg,
 });

@@ -1,6 +1,11 @@
 import React, { ChangeEvent, Children, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { SetEmailAction, SetPasswordAction, SetUserNameAction } from '../../../store/actions';
+import {
+  SetEmailAction,
+  SetPasswordAction,
+  SetRegNameAction,
+  SetUserNameAction,
+} from '../../../store/actions';
 import Form from '../../common/Form/Form';
 import FormButton from '../../common/Form/FormButton/FormButton';
 import Input from '../../common/Form/Input';
@@ -31,10 +36,14 @@ const RegPage = () => {
       setHasErrorConfirm(true);
       setHasErrorPassword(true);
       setMessage('Пароль должен быть больше 10 символов');
+    } else if (name.length === 0 || email.length === 0) {
+      console.log('Error');
+      setHasErrorConfirm(true);
+      setMessage('Все поля обязательны для заполнения');
     } else {
       setHasErrorConfirm(false);
       setHasErrorPassword(false);
-      dispatch(SetUserNameAction(name));
+      dispatch(SetRegNameAction(name));
       dispatch(SetEmailAction(email));
       dispatch(SetPasswordAction(password));
       console.log(name, email, password, confirm);

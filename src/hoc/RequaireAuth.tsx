@@ -3,7 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, Navigate } from 'react-router-dom';
 
-import GetUserName from '../store/selector';
+import { GetUserName } from '../store/selector';
 
 const RequaireAuth: React.FC = ({ children }) => {
   const location = useLocation();

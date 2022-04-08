@@ -5,6 +5,7 @@ const initialState: UserInfoReducerType = {
   name: '',
   email: '',
   password: '',
+  nameReg: '',
 };
 
 const userInfoReducer = (state = initialState, action: ActionType) => {
@@ -30,6 +31,12 @@ const userInfoReducer = (state = initialState, action: ActionType) => {
       return {
         ...state,
         password: action.password,
+      };
+
+    case UserInfoActionType.setRegName:
+      return {
+        ...state,
+        nameReg: action.nameReg,
       };
 
     default:

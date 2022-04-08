@@ -20,14 +20,16 @@ const OneCardPage = ({ cardsInfo }: OneCardsPagePropsType) => {
   };
   return (
     <div className={style.products__wrapper}>
-      <h2>{cardsInfo?.title}</h2>
-      <h3>{cardsInfo?.wt}</h3>
-      <h3>{cardsInfo?.price}</h3>
+      <h2 className={style.products__wrapper_title}>{cardsInfo?.title}</h2>
+      <div className={style.products__wrapper_price}>
+        <h3>{cardsInfo?.wt}</h3>
+        <h3>{cardsInfo?.price}</h3>
+      </div>
+      <img src={cardsInfo?.img} alt="" />
       <p>{cardsInfo?.description}</p>
       <Link className={style.products__link_reviews} to={`/products/${id}/reviews`}>
         Отзывы о товаре
       </Link>
-      <img src={cardsInfo?.img} alt="" />
 
       <div className={style.products__footer}>
         <Link className={style.products__link} to="/products">

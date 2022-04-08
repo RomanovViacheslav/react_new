@@ -27,3 +27,18 @@
   font-weight: 600;
   font-size: 16px;
 }
+
+.products__wrapper_title {
+  margin-bottom: 15px;
+}
+
+.products__wrapper_price {
+  display: flex;
+
+  & > h3 {
+    margin: 0;
+    padding-right: 70px;
+    color: rgb(110, 107, 107);
+    margin-bottom: 20px;
+  }
+}

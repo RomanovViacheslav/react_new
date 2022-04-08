@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { SetUserNameAction } from '../../../store/actions';
+import { GetEmail, GetPassword, GetRegName } from '../../../store/selector';
 import Footer from '../../common/Footer';
 import Form from '../../common/Form/Form';
 import FormButton from '../../common/Form/FormButton/FormButton';
@@ -21,6 +22,9 @@ const AuthPage = () => {
   const [message, setMessage] = useState('Пароль должен быть больше 10 символов');
   const navigate = useNavigate();
 
+  const passwordReg = useSelector(GetPassword);
+  const emailReg = useSelector(GetEmail);
+
   const submitHandler = () => {
     if (password.length > 10) {
       setHasError(false);
@@ -31,6 +35,13 @@ const AuthPage = () => {
       console.log('Eror');
     }
   };
+
+  useEffect(() => {
+    if (passwordReg) {
+      setPassword(passwordReg);
+      setName(emailReg);
+    }
+  }, []);
 
   useEffect(() => {
     if (password.length > 0) {
