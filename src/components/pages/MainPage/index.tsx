@@ -5,7 +5,7 @@ import { data } from '../../../helpers';
 import Card from '../../common/Card/Card';
 
 import style from './MainPage.module.scss';
-import shugar from '../../../shuga.png';
+
 import FormButton from '../../common/Form/FormButton/FormButton';
 
 const MainPage = () => {

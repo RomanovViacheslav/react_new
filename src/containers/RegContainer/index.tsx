@@ -5,7 +5,7 @@ import Form from '../../components/common/Form/Form';
 import FormButton from '../../components/common/Form/FormButton/FormButton';
 import Input from '../../components/common/Form/Input';
 import RegPage from '../../components/pages/RegPage';
-import { GetEmail, GetPassword, GetUserName } from '../../store/selector';
+import { GetEmail, GetPassword, GetUserName } from '../../store/auth/selector';
 
 const RegContainer = () => {
   const navigate = useNavigate();

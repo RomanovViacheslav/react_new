@@ -1,5 +1,3 @@
-import { UserInfoActionType } from './actions';
-
 export type UserInfoReducerType = {
   name: string;
   email: string;

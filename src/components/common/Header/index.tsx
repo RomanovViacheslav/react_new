@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, Link } from 'react-router-dom';
-import { ClearUserNameAction } from '../../../store/actions';
-import { GetUserName } from '../../../store/selector';
+import { ClearUserNameAction } from '../../../store/auth/actions';
+import { GetUserName } from '../../../store/auth/selector';
 import FormButton from '../Form/FormButton/FormButton';
 import style from './Header.module.scss';
 import logo from './logo.png';
@@ -25,6 +25,11 @@ const Header = () => {
           <li>
             <NavLink className={style.header__link} to="/products">
               Products
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className={style.header__link} to="/characters">
+              Сharacters
             </NavLink>
           </li>
           <li>

@@ -5,7 +5,7 @@ import {
   SetPasswordAction,
   SetRegNameAction,
   SetUserNameAction,
-} from '../../../store/actions';
+} from '../../../store/auth/actions';
 import Form from '../../common/Form/Form';
 import FormButton from '../../common/Form/FormButton/FormButton';
 import Input from '../../common/Form/Input';
