@@ -1,6 +1,7 @@
 export type CharactersActionTypeType = {
   getCharacters: 'GET_CHARACTERS';
   getOneCharacter: 'GET_ONE_CHARACTERS';
+  clearCharacter: 'CLEAR_CHARACTER';
 };
 
 export type CharactersReducerType = {
@@ -18,4 +19,11 @@ export type GetOneCharacterActionType = {
   payload: {};
 };
 
-export type ActionType = GetCharactersActionType | GetOneCharacterActionType;
+export type ClearCharacterActionType = {
+  type: CharactersActionTypeType['clearCharacter'];
+};
+
+export type ActionType =
+  | GetCharactersActionType
+  | GetOneCharacterActionType
+  | ClearCharacterActionType;

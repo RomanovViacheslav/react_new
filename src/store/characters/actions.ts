@@ -4,6 +4,7 @@ import { CharactersActionTypeType } from './type';
 export const CharactersActionType: CharactersActionTypeType = {
   getCharacters: 'GET_CHARACTERS',
   getOneCharacter: 'GET_ONE_CHARACTERS',
+  clearCharacter: 'CLEAR_CHARACTER',
 };
 
 export const GetCharactersAction = () => async (dispatch: any) => {
@@ -21,3 +22,7 @@ export const GetOneCharacterAction = (id: string | undefined) => async (dispatch
     payload: data,
   });
 };
+
+export const ClearCharacterAction = () => ({
+  type: CharactersActionType.clearCharacter,
+});

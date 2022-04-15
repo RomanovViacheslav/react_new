@@ -18,6 +18,10 @@ const charactersReducer = (state = initialState, action: ActionType) => {
         ...state,
         character: action.payload,
       };
+    case CharactersActionType.clearCharacter:
+      return {
+        ...initialState,
+      };
 
     default:
       return state;
