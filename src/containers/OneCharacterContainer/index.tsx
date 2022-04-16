@@ -15,8 +15,10 @@ const OneCharacterContainer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(ClearCharacterAction());
     dispatch(GetOneCharacterAction(id));
+    return () => {
+      dispatch(ClearCharacterAction());
+    };
   }, [id]);
 
   const characterData = useSelector(getOneCharacter);
