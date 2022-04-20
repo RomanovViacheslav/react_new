@@ -7,8 +7,8 @@ export const CharactersActionType: CharactersActionTypeType = {
   clearCharacter: 'CLEAR_CHARACTER',
 };
 
-export const GetCharactersAction = () => async (dispatch: any) => {
-  const data = await makeRequest({ url: '/character' });
+export const GetCharactersAction = (page: number) => async (dispatch: any) => {
+  const data = await makeRequest({ url: '/character', params: { page } });
   dispatch({
     type: CharactersActionType.getCharacters,
     payload: data.results,

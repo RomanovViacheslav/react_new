@@ -2,7 +2,7 @@ import { CharactersActionType } from './actions';
 import { CharactersReducerType, ActionType } from './type';
 
 const initialState: CharactersReducerType = {
-  data: [],
+  data: { info: {}, results: [] },
   character: {},
 };
 

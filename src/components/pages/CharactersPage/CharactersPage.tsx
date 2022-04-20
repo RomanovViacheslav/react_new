@@ -1,12 +1,15 @@
 import React from 'react';
 
 import CardCharacter from '../../common/CardCharacter';
+import FormButton from '../../common/Form/FormButton/FormButton';
 import style from './CharacterPage.module.scss';
 
 type CharactersPropsType = {
   characterData: any[];
+  nextHandler: () => void;
+  prevHandler: () => void;
 };
-const CharactersPage = ({ characterData }: CharactersPropsType) => (
+const CharactersPage = ({ characterData, nextHandler, prevHandler }: CharactersPropsType) => (
   <div>
     <div className={style.content__container}>
       <h2>Персонажи</h2>
@@ -18,6 +21,8 @@ const CharactersPage = ({ characterData }: CharactersPropsType) => (
         ) : (
           <h2>Загрузка</h2>
         )}
+        <FormButton text="PREV" onClick={prevHandler} />
+        <FormButton text="NEXT" onClick={nextHandler} />
       </div>
     </div>
   </div>

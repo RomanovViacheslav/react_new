@@ -5,13 +5,13 @@ export type CharactersActionTypeType = {
 };
 
 export type CharactersReducerType = {
-  data: [];
+  data: { results: any; info: any };
   character: {};
 };
 
 export type GetCharactersActionType = {
   type: CharactersActionTypeType['getCharacters'];
-  payload: any[];
+  payload: {};
 };
 
 export type GetOneCharacterActionType = {
